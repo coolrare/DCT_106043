@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ArticleComponent } from './article/article.component';
+// import { DataService } from './data.service';
 
 
 @NgModule({
@@ -20,7 +21,9 @@ import { ArticleComponent } from './article/article.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    // DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
