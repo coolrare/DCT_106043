@@ -9,6 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title = 'The Will Will Web';
+  titleSize = 32;
 
   constructor() { }
 
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
 
   changeTitle() {
     this.title += ' !';
+    this.titleSize++;
   }
 
 }
