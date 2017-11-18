@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   title = 'The Will Will Web';
   titleSize = 32;
+  isHighlight = false;
 
   constructor() { }
 
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
   changeTitle() {
     this.title += ' !';
     this.titleSize++;
+    this.isHighlight = !this.isHighlight;
   }
 
 }
