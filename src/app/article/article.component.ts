@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-article',
@@ -9,10 +9,15 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class ArticleComponent implements OnInit {
 
   @Input() data;
+  @Output() removeEvent = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  remove() {
+    this.removeEvent.emit(this.data.id);
   }
 
 }
